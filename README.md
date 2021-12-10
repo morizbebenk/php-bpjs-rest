@@ -10,17 +10,18 @@ PHP BPJS REST mirip seperti [Postman](https://www.postman.com/), namun aplikasi 
 ## Fitur
 - Proses pembuatan Signature dan Authorization otomatis.
 - Dapat menyimpan & menghapus `ConsID`, `Secret`, `User Key`, `Username` dan `Password` di local storage web browser.
-- Terdapat toggle untuk melihat dan menyembunyikan `ConsID`, `Secret`, `User Key`, `Username` dan `Password`
+- Terdapat toggle untuk melihat dan menyembunyikan `ConsID`, `Secret`, `User Key`, `Username` dan `Password`.
 - Tersedia tombol untuk akses dokumentasi `VClaim` dan `PCare`.
+- Tersedia pilihan untuk Dekripsi / Non Dekripsi data (Khusus VClaim v2.0).
 
 ## Cara Pakai
-- Git clone aplikasi ini di folder Web Service anda misal `htdocs`
-- `composer install`
+- Git clone aplikasi ini di folder aplikasi Web Service anda, misal `htdocs`.
+- `composer install`.
 - Buka web browser.
 - Masukan url aplikasi sesuai instalasi, misal `http://localhost/php-bpjs-rest`.
 - Pilih jenis API sesuai kebutuhan.
 - Jika menggunakan VClaim :
-    - Silahkan isi `ConsID`, `Secret` dan `User Key` (User Key digunakan untuk VClaim v2.0)
+    - Silahkan isi `ConsID`, `Secret` dan `User Key` (User Key digunakan untuk VClaim v2.0).
     - `Endpoint API` dan `Parameter` mengacu pada dokumentasi `VClaim`.
 - Jika menggunakan PCare :
     - Silahkan isi `ConsID`, `Secret`, `Username` dan `Password`.
