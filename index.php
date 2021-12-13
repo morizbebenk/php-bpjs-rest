@@ -20,7 +20,7 @@
         </div>
         <div class="row mt-2">
             <div class="col-md-7">
-                <div class="row">
+                <div class="row form-row">
                     <div class="col-md-3">
                         <div class="form-group">
                             <select class="form-control" id="selectJenisAPI">
@@ -29,6 +29,7 @@
                                 <option value="vclaim-dev-v1">VClaim v1.1 DEV</option>
                                 <option value="vclaim-dev-v2">VClaim v2.0 DEV</option>
                                 <option value="api-jkn-dev">Antrean RS DEV</option>
+                                <option value="vclaim-v2">VClaim v2.0</option>
                                 <option value="pcare">PCare</option>
                                 <option value="pcare-dev">PCare DEV</option>
                             </select>
@@ -56,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="inputPcare">
+                <div class="row form-row" id="inputPcare">
                     <div class="col-md-3">
                         <div class="form-group">
                             <input type="text" class="form-control" id="username" placeholder="Username">
@@ -68,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="inputUserKey">
+                <div class="row form-row" id="inputUserKey">
                     <div class="col-md-6">
                         <div class="form-group">
                             <input type="text" class="form-control" id="user_key" placeholder="User Key">
@@ -83,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-row">
                     <div class="col-md-12">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -117,14 +118,23 @@
                                     <input type="checkbox" id="withParam" class="mr-2" value="1"> Parameter
                                 </div>
                             </div>
-                            <textarea class="form-control" id="params" placeholder="Format JSON" style="resize: vertical;" rows="7"></textarea>
+                            <textarea class="form-control" id="params" placeholder="Format JSON" style="resize: vertical;" rows="5"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <button class="btn btn-success" id="btnSaveCredential">Simpan Data Lokal</button>
-                        <button class="btn btn-danger" id="btnDeleteCredential">Hapus Data Lokal</button>
-                        <a href="https://dvlp.bpjs-kesehatan.go.id:8888/trust-mark/portal.html" target="_blank" class="btn btn-outline-primary">Dokumentasi VClaim</a>
-                        <a href="https://new-api.bpjs-kesehatan.go.id/pcare-rest-v3.0" target="_blank" class="btn btn-outline-dark">Dokumentasi PCare</a>
+                    <div class="col-md-3">
+                        <button class="btn btn-success btn-block" id="btnSaveCredential">Simpan Data Lokal</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-danger btn-block" id="btnDeleteCredential">Hapus Data Lokal</button>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://dvlp.bpjs-kesehatan.go.id:8888/trust-mark/portal.html" target="_blank" class="btn btn-outline-primary btn-block">Dokumentasi VClaim</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://new-api.bpjs-kesehatan.go.id/pcare-rest-v3.0" target="_blank" class="btn btn-outline-dark btn-block">Dokumentasi PCare</a>
+                    </div>
+                    <div class="col-md-3 mt-2">
+                        <a href="change_log.json" target="_blank" class="btn btn-outline-info btn-block">Catatan Perubahan</a>
                     </div>
                 </div>
             </div>
