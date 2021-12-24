@@ -94,7 +94,7 @@ if(!isset($_GET["jenisAPI"]) ||
     $encodedAuthorization = base64_encode($username . ":" . $password . ":" . $kdAplikasi);
     $encryption_mode = false;
 
-    if ($jenisAPI == "vclaim" || $jenisAPI == "vclaim-dev-v1") {
+    if ($jenisAPI == "vclaim-v1" || $jenisAPI == "vclaim-dev-v1") {
         $headers = array(
             "X-cons-id:" . $consid,
             "X-timestamp: " . $tStamp,
@@ -102,7 +102,7 @@ if(!isset($_GET["jenisAPI"]) ||
             "Content-Type:Application/x-www-form-urlencoded"
         );
 
-    } else if ($jenisAPI == "vclaim-v2" || $jenisAPI == "vclaim-dev-v2" || $jenisAPI == "api-jkn-dev") {
+    } else if ($jenisAPI == "vclaim-v2" || $jenisAPI == "vclaim-dev-v2" || $jenisAPI == "antrean-rs-dev") {
         $headers = array(
             "X-cons-id:" . $consid,
             "X-timestamp: " . $tStamp,
