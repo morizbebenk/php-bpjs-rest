@@ -25,10 +25,10 @@
                         <div class="form-group">
                             <select class="form-control" id="selectJenisAPI">
                                 <option value="0" selected disabled>-- Pilih Servis --</option>
-                                <option value="vclaim-v1">VClaim v1</option>
                                 <option value="vclaim-dev-v1">VClaim v1.1 DEV</option>
                                 <option value="vclaim-dev-v2">VClaim v2.0 DEV</option>
-                                <option value="api-jkn-dev">Antrean RS DEV</option>
+                                <option value="antrean-rs-dev">Antrean RS DEV</option>
+                                <option value="vclaim-v1">VClaim v1</option>
                                 <option value="vclaim-v2">VClaim v2.0</option>
                                 <option value="pcare">PCare</option>
                                 <option value="pcare-dev">PCare DEV</option>
