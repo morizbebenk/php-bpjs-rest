@@ -13,7 +13,7 @@
                 "Tersedia tombol untuk akses dokumentasi VClaim dan PCare.",
                 "Tersedia pilihan untuk Dekripsi / Non Dekripsi data (Khusus VClaim v2.0)."
             ],
-            "version" : "v1.0"
+            "version" : "v1.0.0"
         },
         {
             "date" : "2021-12-13",
@@ -23,7 +23,16 @@
                 "Catatan perubahan dapat dilihat di /change_log.json",
                 "Mengubah kode untuk string petik satu menjadi petik dua"
             ],
-            "version" : "v1.1"
+            "version" : "v1.0.1"
+        },
+        {
+            "date" : "2021-12-24",
+            "message" : [
+                "Memperbaiki variabel vclaim menjadi vclaim-v1",
+                "Mengubah variabel api-jkn-dev menjadi antrean-rs-dev",
+                "Mengubah sistem versi dengan mengacu pada Semantic Versioning"
+            ],
+            "version" : "v1.0.2"
         }
     ]
 }
