@@ -7,7 +7,7 @@ $(document).ready(function() {
     if ($("#selectJenisAPI").val() == 'vclaim-v1' || $("#selectJenisAPI").val() == 'vclaim-dev-v1' || $("#selectJenisAPI").val() == 'vclaim-dev-v2') {
         $("#inputPcare").hide()
         $("#inputUserKey").hide()
-    } else if($("#selectJenisAPI").val() == 'api-jkn-dev'){
+    } else if($("#selectJenisAPI").val() == 'antrean-rs-dev'){
         $("#inputPcare").hide()
         $("#inputUserKey").show()
     } else if($("#selectJenisAPI").val() == 'pcare' || $("#selectJenisAPI").val() == 'pcare-dev'){
@@ -51,11 +51,16 @@ $(document).ready(function() {
             $("#inputPcare").hide()
             $("#inputUserKey").show()
             $("#url").val('https://apijkn-dev.bpjs-kesehatan.go.id/vclaim-rest-dev/')
-        } else if ($("#selectJenisAPI").val() == 'api-jkn-dev') {
+        } else if ($("#selectJenisAPI").val() == 'antrean-rs-dev') {
             $("#inputPcare").hide()
             $("#inputUserKey").show()
             $("#url").val('https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/')
-        } else if ($("#selectJenisAPI").val() == 'pcare') {
+        } else if ($("#selectJenisAPI").val() == 'vclaim-v2') {
+            $("#inputPcare").hide()
+            $("#inputUserKey").show()
+            $("#url").val('https://apijkn.bpjs-kesehatan.go.id/vclaim-rest/')
+        } 
+        else if ($("#selectJenisAPI").val() == 'pcare') {
             $("#inputPcare").show()
             $("#inputUserKey").hide()
             $("#url").val('https://new-api.bpjs-kesehatan.go.id/pcare-rest-v3.0/')
