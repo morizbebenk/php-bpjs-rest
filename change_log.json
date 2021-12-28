@@ -33,6 +33,13 @@
                 "Mengubah sistem versi dengan mengacu pada Semantic Versioning"
             ],
             "version" : "v1.0.2"
+        },
+        {
+            "date" : "2021-12-28",
+            "message" : [
+                "Memperbaiki respon data yang tidak memiliki kunci response"
+            ],
+            "version" : "v1.0.3"
         }
     ]
 }
