@@ -176,13 +176,23 @@ if(!isset($_GET["jenisAPI"]) ||
                     $code = "Code";
                 }
 
-                $res = array(
-                    $metaData . "" => array(
-                        "code" => $response[$metaData][$code],
-                        "message" => $response[$metaData]["message"],
-                    ),
-                    "response" => stringDecrypt($keys, $response["response"])
-                );
+                if (!array_key_exists("response", $response)) {
+                    $res = array(
+                        $metaData . "" => array(
+                            "code" => $response[$metaData][$code],
+                            "message" => $response[$metaData]["message"],
+                        )
+                    );
+
+                } else {
+                    $res = array(
+                        $metaData . "" => array(
+                            "code" => $response[$metaData][$code],
+                            "message" => $response[$metaData]["message"],
+                        ),
+                        "response" => stringDecrypt($keys, $response["response"])
+                    );
+                }
 
                 echo json_encode($res);
             }
