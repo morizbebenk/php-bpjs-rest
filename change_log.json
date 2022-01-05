@@ -3,43 +3,51 @@
         "code": 200,
         "message": "Catatan Perubahan"
     },
-    "response": [
+    "response": [{
+            "date": "2022-01-05",
+            "message": [
+                "Menambah host production Antrean RS",
+                "Mengubah tampilan interface",
+                "Menambah fitur Raw JSON"
+            ],
+            "version": "v1.0.4"
+        },
         {
-            "date" : "2021-12-10",
-            "message" : [
+            "date": "2021-12-28",
+            "message": [
+                "Memperbaiki respon data yang tidak memiliki kunci response"
+            ],
+            "version": "v1.0.3"
+        },
+        {
+            "date": "2021-12-24",
+            "message": [
+                "Memperbaiki variabel vclaim menjadi vclaim-v1",
+                "Mengubah variabel api-jkn-dev menjadi antrean-rs-dev",
+                "Mengubah sistem versi dengan mengacu pada Semantic Versioning"
+            ],
+            "version": "v1.0.2"
+        },
+        {
+            "date": "2021-12-13",
+            "message": [
+                "Mengubah tampilan interface",
+                "Menambah host production VClaim v2.0",
+                "Catatan perubahan dapat dilihat di /change_log.json",
+                "Mengubah kode untuk string petik satu menjadi petik dua"
+            ],
+            "version": "v1.0.1"
+        },
+        {
+            "date": "2021-12-10",
+            "message": [
                 "Proses pembuatan Signature dan Authorization otomatis.",
                 "Dapat menyimpan & menghapus ConsID, Secret, User Key, Username dan Password di local storage web browser.",
                 "Terdapat toggle untuk melihat dan menyembunyikan ConsID, Secret, User Key, Username dan Password.",
                 "Tersedia tombol untuk akses dokumentasi VClaim dan PCare.",
                 "Tersedia pilihan untuk Dekripsi / Non Dekripsi data (Khusus VClaim v2.0)."
             ],
-            "version" : "v1.0.0"
-        },
-        {
-            "date" : "2021-12-13",
-            "message" : [
-                "Mengubah tampilan interface",
-                "Menambah host production VClaim v2.0",
-                "Catatan perubahan dapat dilihat di /change_log.json",
-                "Mengubah kode untuk string petik satu menjadi petik dua"
-            ],
-            "version" : "v1.0.1"
-        },
-        {
-            "date" : "2021-12-24",
-            "message" : [
-                "Memperbaiki variabel vclaim menjadi vclaim-v1",
-                "Mengubah variabel api-jkn-dev menjadi antrean-rs-dev",
-                "Mengubah sistem versi dengan mengacu pada Semantic Versioning"
-            ],
-            "version" : "v1.0.2"
-        },
-        {
-            "date" : "2021-12-28",
-            "message" : [
-                "Memperbaiki respon data yang tidak memiliki kunci response"
-            ],
-            "version" : "v1.0.3"
+            "version": "v1.0.0"
         }
     ]
 }
