@@ -3,7 +3,7 @@
 require_once "vendor/autoload.php";
 date_default_timezone_set("UTC");
 
-function callAPI($header, $method, $url, $data){
+function callAPI($header, $method, $url, $data) {
     $curl = curl_init();
     switch ($method){
         case "POST":
@@ -40,13 +40,11 @@ function callAPI($header, $method, $url, $data){
     return $result;
 }
 
-function decompress($string)
-{
+function decompress($string) {
     return \LZCompressor\LZString::decompressFromEncodedURIComponent($string);
 }
 
-function stringDecrypt($key, $string)
-{
+function stringDecrypt($key, $string) {
     $encrypt_method = "AES-256-CBC";
     $key_hash = hex2bin(hash("sha256", $key));
     $iv = substr(hex2bin(hash("sha256", $key)), 0, 16);
@@ -102,7 +100,7 @@ if(!isset($_GET["jenisAPI"]) ||
             "Content-Type:Application/x-www-form-urlencoded"
         );
 
-    } else if ($jenisAPI == "vclaim-v2" || $jenisAPI == "vclaim-dev-v2" || $jenisAPI == "antrean-rs-dev") {
+    } else if ($jenisAPI == "vclaim-v2" || $jenisAPI == "vclaim-dev-v2" || $jenisAPI == "antrean-rs" || $jenisAPI == "antrean-rs-dev") {
         $headers = array(
             "X-cons-id:" . $consid,
             "X-timestamp: " . $tStamp,
@@ -125,7 +123,7 @@ if(!isset($_GET["jenisAPI"]) ||
 
     $response = callAPI($headers, $method, $url, $params);
 
-    if($encryption_mode == false){
+    if($encryption_mode == false) {
         echo $response;
 
     } else {
@@ -153,7 +151,7 @@ if(!isset($_GET["jenisAPI"]) ||
             $response_before = $response;
             $response = json_decode($response, true);
 
-            if($response == null){
+            if($response == null) {
                 $res = array(
                     "metaData" => array(
                         "code" => 401,
@@ -165,7 +163,6 @@ if(!isset($_GET["jenisAPI"]) ||
                 echo json_encode($res);
 
             } else {
-
                 $metaData = "metaData";
                 if (!array_key_exists($metaData, $response)) {
                     $metaData = "metadata";
