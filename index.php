@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/json-viewer.css" />
 
     <title>VClaim & PCare Rest API Servis</title>
+
+    <style>
+        .string { color: green; }
+        .number { color: darkorange; }
+        .boolean { color: blue; }
+        .null { color: red; }
+    </style>
 </head>
 
 <body>
@@ -23,7 +30,7 @@
                 <div class="row form-row">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <select class="form-control" id="selectJenisAPI">
+                            <select class="form-control" id="selectAPI">
                                 <option value="0" selected disabled>>> Pilih Servis <<</option>
                                 <option value="0" disabled>>> DEVELOPMENT <<</option>
                                 <option value="vclaim-dev-v1">VClaim v1.1 DEV</option>
@@ -33,6 +40,7 @@
                                 <option value="0" disabled>>> PRODUCTION <<</option>
                                 <option value="vclaim-v1">VClaim v1.1</option>
                                 <option value="vclaim-v2">VClaim v2.0</option>
+                                <option value="antrean-rs">Antrean RS</option>
                                 <option value="pcare">PCare [Klinik]</option>
                             </select>
                         </div>
@@ -90,7 +98,7 @@
                     <div class="col-md-12">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <select class="custom-select" id="method">
+                                <select class="custom-select" style="border-top-right-radius: 0; border-bottom-right-radius: 0; " id="method">
                                     <option value="GET" selected>GET</option>
                                     <option value="POST">POST</option>
                                     <option value="PUT">PUT</option>
@@ -141,8 +149,8 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="row form-row">
+                    <div class="col-md-8">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text bg-success text-white">
@@ -155,6 +163,9 @@
                                 <option class="collapseResponse" value="collapse_all">Tampilkan Semua Data</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-secondary btn-block" id="btnJSON">Raw JSON</button>
                     </div>
                 </div>
                 <div class="row">
@@ -171,6 +182,30 @@
             <a href="https://github.com/morizbebenk" target="_blank" class="text-dark" style="text-decoration: none;">Dibuat Oleh Moriz</a>
         </div>
     </div>
+
+    <div class="modal fade" id="modalJSON" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header py-2">
+                <h5 class="modal-title">Raw JSON</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre id="dataJSON"></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer py-2">
+                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Tutup</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
